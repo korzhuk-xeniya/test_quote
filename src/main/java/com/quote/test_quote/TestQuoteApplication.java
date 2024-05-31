@@ -27,8 +27,8 @@ public class TestQuoteApplication {
         TransportClient transportClient = new HttpTransportClient();
         VkApiClient vk = new VkApiClient(transportClient);
         Random random = new Random();
-        GroupActor actor = new GroupActor(226070003,
-                "vk1.a.Uhb6q5metKpIi7ooAsOuJZbbciT8AIoRpmDVUVuJDsae_eOFJRmcvvkMJ8wLHcrXSPtrRtPoy7MYoj1-0azZzkCxNVmPuXPvxaHGKhNmydGMcIb71OwH5nH4RuUcHTiLC6yt97VAOhrik48RBZmC1faC3VLl174wdvSP-qGRICknPQPDIEY6Hrz8gv4fe6LDzNyVQtj1dZosGK6nd7S1mg");
+        GroupActor actor = new GroupActor(,
+                "");
         Integer ts = vk.messages().getLongPollServer(actor).execute().getTs();
         while (true) {
             MessagesGetLongPollHistoryQuery historyQuery = vk.messages().getLongPollHistory(actor).ts(ts);
